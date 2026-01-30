@@ -29,6 +29,14 @@ async def health():
     }
 
 
+@app.get("/hello")
+async def hello():
+    """Custom hello endpoint."""
+    return {
+        "message": "hello, welcome to my IDP"
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PORT", "8000"))
